@@ -62,7 +62,7 @@
 3. Add `.env` to `.gitignore`
     - Prevent your API keys from being pushed to GitHub
         
-      '# Ignore Python virtual environments
+      '''# Ignore Python virtual environments
       venv/
       .venv/
 
@@ -73,7 +73,7 @@
       # Ignore Python cache files
       __pycache__/
       *.py[cod]
-      *.pyo'
+      *.pyo'''
 
         
 
