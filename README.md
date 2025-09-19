@@ -18,17 +18,17 @@
 **2.1.2 Set up a virtual environment**
 
 - A virtual environment keeps your project’s Python libraries isolated so they don’t conflict with other projects or system packages.
-- Create your environment: `python -m venv venv`
+- Create your environment: `python3 -m venv .venv`
 - Activate your environment:
-    - **Windows:** `venv\Scripts\activate`
-    - **macOS/Linux:** `source venv/bin/activate`
+    - **Windows:** `.venv\Scripts\activate`
+    - **macOS/Linux:** `source .venv/bin/activate`
 
 **2.1.3 Required Libraries**
 
 - **requests** — for making API calls
 - **python-dotenv** — for loading environment variables from a `.env` file
 - Install and Confirmation
-    - `pip install requests python-dotenv`
+    - `pip install requests python-dotenv jsonpath-ng`
     - `pip list`
 
 **2.2 API Key Security**
@@ -62,10 +62,19 @@
 3. Add `.env` to `.gitignore`
     - Prevent your API keys from being pushed to GitHub
         
-        ```bash
-        # .gitignore
-        .env
-        ```
+      '# Ignore Python virtual environments
+      venv/
+      .venv/
+
+      # Ignore environment variable files (API keys, secrets, etc.)
+      .env
+      .env.*
+
+      # Ignore Python cache files
+      __pycache__/
+      *.py[cod]
+      *.pyo'
+
         
 
 **2.3 Parsing JSON strings**
